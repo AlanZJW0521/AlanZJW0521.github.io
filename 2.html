@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        用JavaScript實現HTML的CRUD
+    </title>
+    <!--<link rel="stylesheet" href="stylePure.css">-->
+    <script src="2CRUD.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <table width=1000px cellspacing="0" cellpadding="10">
+        <tr>
+            <td style="color:rgba(128, 128, 128, 0) ;width: 300px;background-color:gray";>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>姓名*</label><label class="danger" id="fullNameValidationError"></label>
+                        <input type="text" name="fullName" id="fullName" placeholder="此欄位必填">
+                    </div>
+                    <div>
+                        <label>員工編號</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>薪資</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>城市</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="送出💾" class="btn btn-success"/>
+                    </div>
+                </form>
+            </td>
+            <td width=50px>
+
+            </td>
+            <td style="width: 500px; background-color: rgb(236, 199, 114)">
+                <table class="table table-hover" id="employeeList">
+                    <thead>
+                        <tr  style="color: rgba(114, 23, 23, 0.712);">
+                            <th>姓名</th>
+                            <th>員工編號</th>
+                            <th>薪資</th>
+                            <th>城市</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
